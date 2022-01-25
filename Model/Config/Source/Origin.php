@@ -57,7 +57,6 @@ class Origin implements \Magento\Framework\Option\ArrayInterface
                 $this->data->messageManager->addErrorMessage(
                     __("Check your credentials at sales > delivery methods > First flight")
                 );
-                $this->data->messageManager->addErrorMessage($e->getMessage());
             }
             $responce = [];
         }
