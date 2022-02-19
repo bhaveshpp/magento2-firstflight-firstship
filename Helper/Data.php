@@ -83,7 +83,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             "AccountNo" => $this->config->getAccountNo(),
             "Destination" => $data['dest_country_id'],
             "Dimension" => "",
-            "Origin" => $this->config->getOriginCountryId(),
+            "Origin" => $this->config->getOrigin(),
             "Product" => $this->config->getShippingType(),
             "ServiceType" => $this->config->getServiceType(),
             "UserName" => $this->config->getUserName(),

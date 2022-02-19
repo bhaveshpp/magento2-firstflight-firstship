@@ -94,8 +94,13 @@ class Carrier extends AbstractCarrier implements CarrierInterface
         $method->setMethod($this->_methodCode);
         $method->setMethodTitle($this->getConfigData('name'));
 
+        $destCountryId = $request->getDestRegionCode();
+        if (!isset($destCountryId)) {
+            $destCountryId = $request->getDestCountryId();
+        }
+
         $data = [
-            'dest_country_id' => $request->getDestCountryId(),
+            'dest_country_id' => $destCountryId,
             'package_weight' => $request->getPackageWeight(),
             'country_id' => $request->getCountryId()
         ];
